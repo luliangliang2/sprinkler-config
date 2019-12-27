@@ -39,6 +39,11 @@
 			<groupId>com.cnedutech</groupId>
 			<artifactId>sprinkler-orm</artifactId>
 		</dependency>
+		<!-- 测试项目登录地址 -->
+		<dependency>
+			<groupId>com.cnedutech</groupId>
+			<artifactId>sprinkler-oath2-client</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>

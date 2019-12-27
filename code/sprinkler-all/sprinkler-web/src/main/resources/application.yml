@@ -4,6 +4,8 @@ spring:
   jta:
     log-dir: classpath:tx-logs
     transaction-manager-id: txManager   
+  main:
+    allow-bean-definition-overriding: true
       
 freeager:
   atomikos:
@@ -70,6 +72,22 @@ freeager:
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
         # 合并多个DruidDataSource的监控数据
         useGlobalDataSourceStat: true 
-      
+
+
+#配置服务端的地址
+auth-server: http://localhost:8080/uac
+
+#配饰客户端的认证方式
+security:
+  oauth2:
+    client:
+      client-id: sheep2
+      client-secret: 123456
+      user-authorization-uri: ${auth-server}/oauth/authorize
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key
+        
   
   
