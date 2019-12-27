@@ -1,5 +1,5 @@
 server:
-  port: 8080  #启动其他实例时需要修改端口号
+  port: 8088  #启动其他实例时需要修改端口号
 spring:
   application:
     name: service-producer
