@@ -22,7 +22,6 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -35,18 +34,11 @@
 		<dependency>
 			<groupId>com.cnedutech</groupId>
 			<artifactId>sprinkler-common</artifactId>
-			<version>${project.parent.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.cnedutech</groupId>
 			<artifactId>sprinkler-orm</artifactId>
-			<version>${project.parent.version}</version>
 		</dependency>
-
-
-
-
 	</dependencies>
 	<build>
 		<resources>
