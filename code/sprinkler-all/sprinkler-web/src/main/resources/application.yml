@@ -90,9 +90,17 @@ security:
     resource:
       jwt:
         key-uri: ${auth-server}/oauth/token_key
-        
+
+
+
+       
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+      
+feign: 
+  hystrix: 
+    enabled: false
+      
   
