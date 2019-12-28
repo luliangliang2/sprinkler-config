@@ -185,14 +185,13 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>sprinkler-common-jar</module>
-		<module>sprinkler-web</module>
-		<module>sprinkler-orm</module>
-		<module>sprinkler-eureka</module>
+		<module>web-sprinkler-web</module>
+		<module>sprinkler-orm-jar</module>
+		<module>web-sprinkler-eureka</module>
 		<module>sprinkler-server-provider</module>
-		<module>sprinkler-provider</module>
-		<module>sprinkler-consumer</module>
-		<module>sprinkler-cloud-config</module>
-		<module>sprinkler-oath2-server</module>
-		<module>sprinkler-oath2-client</module>
+		<module>web-sprinkler-provider</module>
+		<module>web-sprinkler-consumer</module>
+		<module>sprinkler-oath2-server-jar</module>
+		<module>sprinkler-oath2-client-jar</module>
 	</modules>
 </project>
