@@ -44,6 +44,16 @@
 			<groupId>com.cnedutech</groupId>
 			<artifactId>sprinkler-oath2-client</artifactId>
 		</dependency>
+
+		<!-- eureka 注册中心 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<resources>

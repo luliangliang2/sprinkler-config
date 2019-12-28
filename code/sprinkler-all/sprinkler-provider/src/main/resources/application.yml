@@ -7,3 +7,17 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+
+auth-server: http://localhost:8080/uac
+#配置客户端的认证方式
+security:
+  oauth2:
+    client:
+      client-id: sheep2
+      client-secret: 123456
+      user-authorization-uri: ${auth-server}/oauth/authorize
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key
