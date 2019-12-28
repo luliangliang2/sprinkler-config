@@ -9,7 +9,7 @@
 		<artifactId>sprinkler-all</artifactId>
 		<version>${project.version}</version>
 	</parent>
-	<artifactId>sprinkler-orm</artifactId>
+	<artifactId>sprinkler-orm-jar</artifactId>
 	<name>sprinkler-orm</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -69,7 +69,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-common</artifactId>
+			<artifactId>sprinkler-common-jar</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>tk.mybatis</groupId>

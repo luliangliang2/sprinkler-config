@@ -9,7 +9,7 @@
 		<artifactId>sprinkler-all</artifactId>
 		<version>1.0</version>
 	</parent>
-	<artifactId>sprinkler-web</artifactId>
+	<artifactId>web-sprinkler-web</artifactId>
 
 	<name>sprinkler-web</name>
 	<url>http://maven.apache.org</url>
@@ -33,16 +33,16 @@
 		</dependency>
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-common</artifactId>
+			<artifactId>sprinkler-common-jar</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-orm</artifactId>
+			<artifactId>sprinkler-orm-jar</artifactId>
 		</dependency>
 		<!-- 测试项目登录地址 -->
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-oath2-client</artifactId>
+			<artifactId>sprinkler-oath2-client-jar</artifactId>
 		</dependency>
 
 		<!-- eureka 注册中心 -->

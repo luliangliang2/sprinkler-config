@@ -9,8 +9,8 @@
 		<artifactId>sprinkler-all</artifactId>
 		<version>${project.version}</version>
 	</parent>
-	<artifactId>sprinkler-oath2-client</artifactId>
-	<name>sprinkler-oath2-client</name>
+	<artifactId>sprinkler-oath2-client-jar</artifactId>
+	<name>sprinkler-oath2-client-jar</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

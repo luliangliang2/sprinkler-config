@@ -64,17 +64,22 @@
 			<!-- 自己的组件 共用模块 -->
 			<dependency>
 				<groupId>com.cnedutech</groupId>
-				<artifactId>sprinkler-common</artifactId>
+				<artifactId>sprinkler-common-jar</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.cnedutech</groupId>
-				<artifactId>sprinkler-orm</artifactId>
+				<artifactId>sprinkler-orm-jar</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.cnedutech</groupId>
-				<artifactId>sprinkler-oath2-client</artifactId>
+				<artifactId>sprinkler-oath2-client-jar</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cnedutech</groupId>
+				<artifactId>sprinkler-oath2-server-jar</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
@@ -179,7 +184,7 @@
 	</build>
 	<packaging>pom</packaging>
 	<modules>
-		<module>sprinkler-common</module>
+		<module>sprinkler-common-jar</module>
 		<module>sprinkler-web</module>
 		<module>sprinkler-orm</module>
 		<module>sprinkler-eureka</module>

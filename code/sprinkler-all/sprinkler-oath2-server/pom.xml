@@ -40,12 +40,12 @@
 		</dependency>
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-common</artifactId>
+			<artifactId>sprinkler-common-jar</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-orm</artifactId>
+			<artifactId>sprinkler-orm-jar</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>

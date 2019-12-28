@@ -9,7 +9,7 @@
 		<artifactId>sprinkler-all</artifactId>
 		<version>${project.version}</version>
 	</parent>
-	<artifactId>sprinkler-provider</artifactId>
+	<artifactId>web-sprinkler-provider</artifactId>
 	<name>sprinkler-provider</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -37,7 +37,7 @@
 		<!-- 测试项目登录地址 -->
 		<dependency>
 			<groupId>com.cnedutech</groupId>
-			<artifactId>sprinkler-oath2-client</artifactId>
+			<artifactId>sprinkler-oath2-client-jar</artifactId>
 		</dependency>
 	</dependencies>
 </project>

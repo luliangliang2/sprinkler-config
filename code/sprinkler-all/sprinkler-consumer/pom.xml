@@ -9,7 +9,7 @@
 		<artifactId>sprinkler-all</artifactId>
 		<version>${project.version}</version>
 	</parent>
-	<artifactId>sprinkler-consumer</artifactId>
+	<artifactId>web-sprinkler-consumer</artifactId>
 	<name>sprinkler-consumer</name>
 	<url>http://maven.apache.org</url>
 	<properties>

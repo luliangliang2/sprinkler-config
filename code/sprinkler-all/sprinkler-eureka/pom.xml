@@ -21,7 +21,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<artifactId>sprinkler-eureka</artifactId>
+	<artifactId>web-sprinkler-eureka</artifactId>
 	<name>sprinkler-eureka</name>
 	<url>http://maven.apache.org</url>
 	<properties>
