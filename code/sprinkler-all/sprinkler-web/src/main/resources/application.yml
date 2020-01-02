@@ -94,7 +94,6 @@ security:
         key-uri: ${auth-server}/oauth/token_key
 
 
-
        
 eureka:
   client:
