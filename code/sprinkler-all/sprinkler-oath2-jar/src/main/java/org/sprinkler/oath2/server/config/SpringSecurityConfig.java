@@ -15,11 +15,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
-    @Bean
-    public AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager();
-    }
+	// 配置token验证管理的Bean
+	@Override
+	@Bean
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -41,13 +42,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http
-                .requestMatchers().antMatchers("/oauth/**","/login/**","/logout/**")
-                .and()
-                .authorizeRequests()
-                .antMatchers("/oauth/**").authenticated()
-                .and()
-                .formLogin().permitAll();
+        http.requestMatchers().antMatchers("/oauth/**","/login/**","/logout/**")
+            .and()
+            .authorizeRequests()
+            .antMatchers("/oauth/**").authenticated()
+            .and()
+            .formLogin().permitAll();
     }
 
     @Override

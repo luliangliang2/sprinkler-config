@@ -44,13 +44,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.autoApprove(true);
 	}
 
-	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 		endpoints.authenticationManager(authenticationManager).tokenStore(jwtTokenStore())
 				.userDetailsService(userDetailsService);
 	}
 
-	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
 		security
 				.tokenKeyAccess("permitAll()") //获取token请求不进行拦截
