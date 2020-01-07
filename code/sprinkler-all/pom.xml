@@ -144,60 +144,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- YUI Compressor Maven js,css压缩插件,一般不需要，可删除 -->
-			<plugin>
-				<groupId>net.alchim31.maven</groupId>
-				<artifactId>yuicompressor-maven-plugin</artifactId>
-				<version>1.5.1</version>
-				<executions>
-					<execution>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>compress</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<!-- 读取js,css文件采用UTF-8编码默认就是utf-8 -->
-					<encoding>UTF-8</encoding>
-					<!-- 不显示js可能的错误 -->
-					<jswarn>false</jswarn>
-					<!-- 若存在已压缩的文件，会先对比源文件是否有改动 有改动便压缩，无改动就不压缩 -->
-					<force>true</force>
-					<!-- 在指定的列号后插入新行 -->
-					<linebreakpos>-1</linebreakpos>
-					<!-- 压缩之前先执行聚合文件操作 -->
-					<preProcessAggregates>true</preProcessAggregates>
-					<!-- 压缩后保存文件后缀 无后缀 -->
-					<nosuffix>true</nosuffix>
-					<!-- 源目录，即需压缩的根目录 -->
-					<sourceDirectory>src/main/static</sourceDirectory>
-					<outputDirectory>target/classes</outputDirectory>
-					<force>true</force>
-					<!-- 压缩js和css文件 -->
-					<includes>
-						<include>*/js/**/*.js</include>
-						<include>*/css/**/*.css</include>
-					</includes>
-					<excludes>
-						<exclude>**/*.min.js</exclude>
-						<exclude>**/*-min.js</exclude>
-						<exclude>**/index/carousel.js</exclude>
-						<exclude>**/3dprint/layer/**/*.js</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-			<!-- html页面中的 css,js添加版本号插件 -->
-			<!--plugin> <groupId>com.google.code.maven-replacer-plugin</groupId> <artifactId>replacer</artifactId> 
-				<version>1.5.3</version> <executions> <execution> <phase>prepare-package</phase> 
-				<goals> <goal>replace</goal> </goals> </execution> </executions> <configuration> 
-				<includes> <include>${basedir}/target/classes/templates/*.html</include> 
-				<include>${basedir}/target/classes/templates/**/*.html</include> </includes> 
-				<replacements> <replacement> <token>\.css\"</token> <value>.css?v=${maven.build.timestamp}\"</value> 
-				</replacement> <replacement> <token>\.css\'</token> <value>.css?v=${maven.build.timestamp}\'</value> 
-				</replacement> <replacement> <token>\.js\"</token> <value>.js?v=${maven.build.timestamp}\"</value> 
-				</replacement> <replacement> <token>\.js\'</token> <value>.js?v=${maven.build.timestamp}\'</value> 
-				</replacement> </replacements> </configuration> </plugin -->
 		</plugins>
 	</build>
 	<packaging>pom</packaging>
