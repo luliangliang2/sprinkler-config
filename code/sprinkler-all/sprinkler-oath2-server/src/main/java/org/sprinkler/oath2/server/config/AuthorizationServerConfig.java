@@ -1,7 +1,9 @@
 package org.sprinkler.oath2.server.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -19,20 +21,23 @@ import java.util.concurrent.TimeUnit;
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+	
+	 @Autowired
+	private AuthenticationManager authenticationManager;
+
+	 public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 
         // 定义了两个客户端应用的通行证
         clients.inMemory()
                 .withClient("sheep1")
                 .secret(new BCryptPasswordEncoder().encode("123456"))
-                .authorizedGrantTypes("authorization_code", "refresh_token")
+                .authorizedGrantTypes("authorization_code","password", "refresh_token")
                 .scopes("all")
                 .autoApprove(true)
                 .and()
                 .withClient("sheep2")
                 .secret(new BCryptPasswordEncoder().encode("123456"))
-                .authorizedGrantTypes("authorization_code", "refresh_token")
+                .authorizedGrantTypes("authorization_code","password", "refresh_token")
                 .scopes("all")
                 .autoApprove(true);
     }
@@ -48,11 +53,15 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         tokenServices.setTokenEnhancer(endpoints.getTokenEnhancer());
         tokenServices.setAccessTokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(1)); // 一天有效期
         endpoints.tokenServices(tokenServices);
+        endpoints.authenticationManager(authenticationManager);
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.tokenKeyAccess("isAuthenticated()");
+        security
+        .tokenKeyAccess("permitAll()")
+        .checkTokenAccess("isAuthenticated()")
+        .allowFormAuthenticationForClients();
     }
 
     @Bean

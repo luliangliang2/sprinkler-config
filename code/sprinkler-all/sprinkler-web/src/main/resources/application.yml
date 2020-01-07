@@ -110,5 +110,11 @@ eureka:
 feign: 
   hystrix: 
     enabled: false
+  httpclient:
+    enabled: true
+    
+ribbon:
+  eureka:
+    enabled: true
       
   

@@ -1,6 +1,6 @@
 server:
   port: 8088  #启动其他实例时需要修改端口号
-
+  max-http-header-size: 20480
 
 auth-server: http://localhost:8080/uac
 #配置客户端的认证方式
